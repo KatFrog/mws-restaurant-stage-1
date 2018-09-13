@@ -161,6 +161,7 @@ createReviewHTML = (review) => {
 fillBreadcrumb = (restaurant = self.restaurant) => {
     const breadcrumb = document.getElementById('breadcrumb');
     const li = document.createElement('li');
+    li.setAttribute('role', 'listitem');
     li.innerHTML = restaurant.name;
     breadcrumb.appendChild(li);
 }
