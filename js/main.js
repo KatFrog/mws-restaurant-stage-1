@@ -1,8 +1,8 @@
 let restaurants,
     neighborhoods,
-    cuisines
-var newMap
-var markers = []
+    cuisines;
+var newMap;
+let markers = [];
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
@@ -151,6 +151,7 @@ createRestaurantHTML = (restaurant) => {
 
     const image = document.createElement('img');
     image.className = 'restaurant-img';
+    image.tabIndex = 0;
     image.src = DBHelper.imageUrlForRestaurant(restaurant);
     image.alt = DBHelper.imageAltForRestaurant(restaurant);
     li.append(image);
@@ -161,15 +162,27 @@ createRestaurantHTML = (restaurant) => {
 
     const name = document.createElement('h1');
     name.innerHTML = restaurant.name;
+    name.tabIndex = 0;
     div.append(name);
-
-    const neighborhood = document.createElement('p');
-    neighborhood.innerHTML = restaurant.neighborhood;
-    div.append(neighborhood);
 
     const address = document.createElement('p');
     address.innerHTML = restaurant.address;
+    address.tabIndex = 0;
     div.append(address);
+
+    const neighborhood = document.createElement('p');
+    neighborhood.innerHTML = `<strong>Neighborhood:</strong>  ${restaurant.neighborhood}`;
+    neighborhood.tabIndex = 0;
+    neighborhood.setAttribute('role', 'note');
+    neighborhood.setAttribute('aria-roledescription', 'Neighborhood of Restaurant');
+    div.append(neighborhood);
+
+    const cuisine = document.createElement('p');
+    cuisine.innerHTML = `<strong>Cuisine</strong>:  ${restaurant.cuisine_type}`;
+    cuisine.setAttribute('role', 'note');
+    cuisine.setAttribute('aria-roledescription', 'Type of Cuisine');
+    cuisine.tabIndex = 0;
+    div.append(cuisine);
 
     const more = document.createElement('a');
     more.innerHTML = 'View Details';
