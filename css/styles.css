@@ -269,6 +269,22 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Details ====================== */
+.restaurant-details-main {
+    background-color: #f3f3f3;
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 100%;
+}
+
+@media only screen and (max-width: 650) {
+    .restaurant-details-main {
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
+
+
+
 .inside header {
   position: fixed;
   top: 0;
@@ -333,6 +349,7 @@ nav h1 a {
 .restaurant-container, .reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
+  /* order: 2; */
   padding: 140px 40px 30px;
   width: 50%;
 }
@@ -359,9 +376,8 @@ nav h1 a {
   border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
-  margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 5px;
   position: relative;
   width: 85%;
 }
