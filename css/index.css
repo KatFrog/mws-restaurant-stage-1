@@ -18,7 +18,7 @@
     width: 100%;
 }
 
-.filter-options select {
+.selection {
   background-color: white;
   border: 1px solid #fff;
   font-family: Arial,sans-serif;
@@ -27,7 +27,13 @@
   letter-spacing: 0;
   margin: 10px;
   padding: 0 10px;
-  width: 200px;
+  width: 100px;
+}
+
+@media (min-width: 450px) {
+    .selection {
+        width: 200px;
+    }
 }
 
 .filter-label {
@@ -47,37 +53,31 @@
   text-align: center;
 }
 
-.restaurants li {
+.restaurant-listing {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
   margin: 15px;
-  max-width: 300px;
+  max-width: 100%;
   min-height: 380px;
   min-width: 270px;
   padding: 10px;
   text-align: left;
 }
 
-@media only screen and (min-width: 0) {
-    .restaurant li {
-        max-width: 100%;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .restaurant li {
+@media (min-width: 600px) {
+    .restaurant-listing {
         max-width: 45%;
     }
 }
 
-@media only screen and (min-width: 1100px) {
-    .restaurant li {
+@media (min-width: 1000px) {
+    .restaurant-listing {
         max-width: 300px;
     }
 }
 
-.restaurants .restaurant-img {
+.restaurant-img {
   background-color: #ccc;
   display: block;
   margin: 0;
