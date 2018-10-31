@@ -15,5 +15,7 @@ To complete this project, I needed to make several decisions:
 ## Installation
 To install and run this app:
 1. Download or clone this repo.
-2. Change directories into the downloaded/cloned code.
-3. Run the command "npm install".
+2. Open "index.html" in a browser.
+
+## Questions
+If you have any questions about this app or any problems running it, please enter an issue.
